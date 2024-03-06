@@ -1,0 +1,64 @@
+What is the authentication-> Oauth
+then what is the grant typw-> Password or client credentials(client id and client secret)
+
+SERIALIZATION(Related to request payload, setters plays main role): Process of converting java object(of POJO classes) into payload{Json format}. Serialization is achieved using POJO classes.
+Pojo classes are created(no. of variables and there getters, setters) based on Request payload.
+In Rest assured automation this pojo class object is sent as a payload. and in runtime restassured will handle all key and values pairs.
+
+DESERIALISATION(Related to response, getetrs plays main role): Process of converting response back to Java Object.
+
+libraries rqd for serial and deseria:- Jackson, Gson id format is JSON......JAXB is format is xml
+
+
+To send any file or image through postman calls we need to have request body in form data only not json.
+Through json we can attach links not files.
+
+-----------Maven Project creation---------------
+mvn --version 
+
+to createv maven project with structure:
+mvn archetype::generate -DgroupId=frameWorkBDD -DartifactId=MavenJava -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+--> groupid will always be package name and artifact id will always be project name
+mvn archetype::generate -DgroupId=TestNGPackage -DartifactId=TestNGAutomation -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+integrate maven with eclispse--> mvn eclipse:eclipse
+
+----creating cucumber framework----
+while creating cucumber framework remember cucumber supports only quickstart template
+1 plugin help->eclipse marketplace->Natural(search with cucumber)
+2 dependencies needed in pom.xm; -->cucumber-java and cucumber-junit
+
+--> Stepdefinition file matches with Tagname and description
+-->There should be one matching implementation for each gherkin line
+--> Test runner-> in glue and feature provie package name of stepdefinition and feature file.no need to point particulat stepdefinition fi;e
+--> regular expression for different parameter but same implementation
+
+
+Enum is used for declaring constant resources
+
+To run project through maven commands
+-------------------------------------------
+got to cmd and go to project location
+mvn compile---> compile testcases
+mvn test --> compile and run testscases
+>mvn test -Dcucumber.options="--tags @AdPlace"  ---to run testcases with @AddPlace tags only
+mvn test verify to generate reports as well
+//D is for parameter
+
+
+Jenkins cd /d E:\Akash DSA Journey
+on cmd java -jar jenkins.war -httpPort=8080 --enable-future-java then got to browser and enter localhost:8080
+jenkins password --78dabcd566b14459aff28d0520100281
+username sontakeAkash, Jenkins391@
+---------------------------
+Github -aakashsontake391@gmail.com, Sontake391@
+---------------------------
+create account
+cmd-> tell git who r u
+git config --global user.name "sontakeakash"
+git config --global user.email "aakashsontake391@gmail.com"
+add all files into a folder and then- git init---> to initialize git into local folder
+git add *
+git commit -m "message"
+git remote add origin "repolink" to make connection from local
+
